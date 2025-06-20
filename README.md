@@ -1,7 +1,7 @@
 # AI Chat Bot - Flutter
 
 ## LinkedIn Post:
-
+https://www.linkedin.com/feed/update/urn:li:activity:7341917013293867010/
 
 ### Preview:
 <div align="center">
