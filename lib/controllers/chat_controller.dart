@@ -9,7 +9,7 @@ class ChatController extends GetxController {
   var messageController = TextEditingController().obs;
 
   final String _apiKey =
-      "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";
+      "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";
   final String _apiUrl = "https://openrouter.ai/api/v1/chat/completions";
 
   final scrollController = ScrollController();
@@ -49,10 +49,9 @@ class ChatController extends GetxController {
           "model": "gpt-3.5-turbo",
           "messages": [
             {
-              "role": "system",
-              "content": "You are a helpful parenting chatbot."
-            },
-            {"role": "user", "content": text}
+              "role": "user",
+              "content": text,
+            }
           ]
         }),
       );

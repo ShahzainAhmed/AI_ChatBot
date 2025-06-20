@@ -2,10 +2,12 @@ import 'package:chatgpt_clone/controllers/chat_controller.dart';
 import 'package:chatgpt_clone/modules/chat/components/chat_input_field.dart';
 import 'package:chatgpt_clone/modules/chat/components/chat_message_widget.dart';
 import 'package:chatgpt_clone/modules/components/custom_appbar.dart';
+import 'package:chatgpt_clone/resources/app_assets.dart';
 import 'package:chatgpt_clone/resources/app_colors.dart';
 import 'package:chatgpt_clone/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -26,8 +28,15 @@ class ChatScreen extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.smart_toy_outlined,
-                          size: 64.sp, color: Colors.white70),
+                      SvgPicture.asset(
+                        AppAssets.kChatGPTLogo,
+                        height: 90.h,
+                        width: 90.w,
+                        colorFilter: ColorFilter.mode(
+                          AppColors.kWhiteColor,
+                          BlendMode.srcIn,
+                        ),
+                      ),
                       SizedBox(height: 16.h),
                       Text(
                         "How can I help you today?",
